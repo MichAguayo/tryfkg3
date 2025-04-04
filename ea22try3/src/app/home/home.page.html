@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      EA22-DAMM 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="getCurrentLocation()">Obtener posición</ion-button>
+  <br>
+  <p>Latitud: {{ latitude }}</p>
+  <p>Longitud: {{ longitude }}</p><br>
+
+  <ion-button (click)="showAlert()">Mostrar alerta</ion-button>
+  <br>
+  <ion-button (click)="checkConnection()">Comprobar conexión</ion-button>
+  <br>
+  <p>Conectado: {{ conectado }}</p>
+  <p>Conexión: {{ tipoConexion }}</p><br>
+</ion-content>

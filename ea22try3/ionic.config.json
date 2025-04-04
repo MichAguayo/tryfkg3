@@ -1,0 +1,7 @@
+{
+  "name": "ea22try3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

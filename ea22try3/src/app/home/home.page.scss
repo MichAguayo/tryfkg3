@@ -1,0 +1,55 @@
+ion-header {
+  background: linear-gradient(135deg, #f06, #ff66b2, #ff99cc);
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+  ion-toolbar {
+    --background: transparent;
+    --color: #ffffff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 0;
+
+    ion-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+}
+
+ion-content {
+  --background: #f5e3e3;
+  padding: 20px;
+
+  ion-button {
+    --background: #ff66b2;
+    --background-activated: #ff3399;
+    --color: #fff;
+    --border-radius: 12px;
+    margin: 12px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(255, 102, 178, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(255, 102, 178, 0.5);
+    }
+  }
+
+  br {
+    margin-bottom: 10px;
+  }
+
+  /* Asegurar que el texto de latitud, longitud y conexión esté en negro */
+  ion-label,
+  p {
+    color: #000000 !important;  /* Aplica color negro sin que otros estilos lo sobrescriban */
+    font-size: 1.1rem;
+    margin-top: 5px;
+  }
+}
