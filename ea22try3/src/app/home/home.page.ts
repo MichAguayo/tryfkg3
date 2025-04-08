@@ -3,6 +3,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/a
 import { GeolocationService } from '../geolocation.service';
 import { DialogService } from '../dialog.service';
 import { Network } from '@capacitor/network';
+import {Camera, CameraResultType} from '@capacitor/camera';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -37,5 +38,13 @@ export class HomePage {
     this.tipoConexion = status.connectionType;
     console.log('Conectado:', status.connected);     
     console.log('Tipo de conexión:', status.connectionType); 
+  }
+  takePhoto = async () => {
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: false,
+      resultType: CameraResultType.Uri,
+    });
+    console.log('Foto tomada:', image);
   }
 }
